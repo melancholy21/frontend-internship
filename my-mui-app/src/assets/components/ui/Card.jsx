@@ -21,7 +21,7 @@ export default function GymRegistrationCard() {
     >
       <div className="pt-10 px-8 sm:px-10 pb-2">
         <Typography variant="h5" component="h2" sx={{ fontWeight: 800, color: '#111827', mb: 1, fontSize: '1.4rem' }}>
-          Gym Registration Form
+          Gym Registration Form!
         </Typography>
         <Typography variant="body1" sx={{ color: '#374151', fontSize: '0.9rem', fontWeight: 500 }}>
           Fill out the information below to sign up for our gym facilities.

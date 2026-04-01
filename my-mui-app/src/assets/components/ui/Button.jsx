@@ -6,16 +6,16 @@ export default function GymSubmitButton() {
       variant="contained" 
       sx={{ 
         py: 1.25, 
-        px: { xs:5, sm: 6 },
-        fontSize: '1rem', 
+        px: { xs: 5, sm: 6 },
+        fontSize: '16px', 
         fontWeight: 'bold', 
         textTransform: 'none',
         borderRadius: '4px',
-        backgroundColor: '#007bff', 
-        color: '#fff',
+        backgroundColor: 'primary.main', 
+        color: 'common.white',
         boxShadow: 'none',
         '&:hover': {
-          backgroundColor: '#0069d9',
+          backgroundColor: 'primary.dark',
           boxShadow: 'none',
         }
       }}

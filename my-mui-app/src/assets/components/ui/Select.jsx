@@ -3,11 +3,12 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 const LabelConfig = {
-  fontSize: '0.875rem',
+  fontSize: '16px',
   fontWeight: 700,
-  color: '#111827',
+  color: 'text.primary',
   mb: 0.5,
 };
 
@@ -19,7 +20,7 @@ export default function GymGoalSelect() {
   };
 
   return (
-    <div className="flex flex-col w-full mt-5">
+    <Box component='section'sx={{ display: 'flex', flexDirection: 'column', width: '100%', mt: 2.5}}>
       <Typography sx={LabelConfig}>Fitness Goal</Typography>
       <FormControl fullWidth size="small">
         <Select
@@ -29,14 +30,14 @@ export default function GymGoalSelect() {
           inputProps={{ 'aria-label': 'Without label' }}
           sx={{
             borderRadius: '4px',
-            backgroundColor: '#fff',
+            backgroundColor: 'background.paper',
             '& fieldset': {
-              borderColor: '#d1d5db',
+              borderColor: 'grey.300',
             },
             '& .MuiSelect-select': {
               py: 1.25,
-              fontSize: '0.9rem',
-              color: goal === '' ? '#9ca3af' : '#374151',
+              fontSize: '16px',
+              color: goal === '' ? 'text.disabled' : 'text.secondary',
             }
           }}
         >
@@ -49,6 +50,6 @@ export default function GymGoalSelect() {
           <MenuItem value="flexibility">Flexibility</MenuItem>
         </Select>
       </FormControl>
-    </div>
+    </Box>
   );
 }

@@ -1,11 +1,12 @@
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box'
 
 export default function TermsCheckbox() {
   return (
-    <div className="flex flex-col mt-6 mb-6 w-full text-left">
-      <Typography variant="body2" sx={{ color: '#4b5563', lineHeight: 1.5, mb: 1, fontSize: '0.9rem' }}>
+    <Box component='section' sx={{ display: 'flex', flexDirection: 'column', my: 3, width: '100%', textAlign: 'left' }}>
+      <Typography variant="body2" sx={{ color: 'grey.600', lineHeight: 1.5, mb: 1, fontSize: '12px' }}>
         Please read and accept the terms and conditions to proceed with the registration.
       </Typography>
 
@@ -13,9 +14,9 @@ export default function TermsCheckbox() {
         control={
           <Checkbox 
             sx={{
-              color: '#d1d5db',
-              '&.Mui-checked': { color: '#007bff' },
-              '& .MuiSvgIcon-root': { fontSize: 24 }
+              color: 'grey.300',
+              '&.Mui-checked': { color: 'primary.main' },
+              '& .MuiSvgIcon-root': { fontSize: '24px' }
             }}
           />
         } 
@@ -23,12 +24,12 @@ export default function TermsCheckbox() {
         sx={{
           ml: -1,
           '& .MuiTypography-root': {
-            fontSize: '0.875rem',
-            color: '#111827',
+            fontSize: '16px',
+            color: 'text.primary',
             fontWeight: 600
           }
         }}
       />
-    </div>
+    </Box>
   );
 }

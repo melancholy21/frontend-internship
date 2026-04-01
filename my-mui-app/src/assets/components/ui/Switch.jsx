@@ -1,36 +1,37 @@
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 export default function GymUpdatesSwitch() {
   return (
-    <div className="flex flex-col mt-6 w-full text-left">
+    <Box component="section" sx={{ display: 'flex', flexDirection: 'column', mt: 1.5, width: '100%', textAlign: 'left' }}>
       <FormControlLabel
         control={
           <Switch 
             defaultChecked 
             sx={{
               '& .MuiSwitch-switchBase.Mui-checked': {
-                color: '#007bff',
+                color: 'primary.main',
               },
               '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
-                backgroundColor: '#007bff',
+                backgroundColor: 'primary.main',
               },
             }}
           />
         }
         label={
-          <div className="ml-1">
-            <Typography sx={{ fontSize: '0.875rem', color: '#111827', fontWeight: 600 }}>
+          <Box component='section' sx={{ ml: 0.5 }}> 
+            <Typography sx={{ fontSize: '16px', color: 'text.primary', fontWeight: 600 }}>
               Subscribe to Gym Updates
             </Typography>
-            <Typography sx={{ fontSize: '0.8rem', color: '#6b7280', mt: 0.25 }}>
+            <Typography sx={{ fontSize: '12px', color: 'grey.500', mt: 0.25 }}>
               Receive weekly class schedules and exclusive member offers.
             </Typography>
-          </div>
+          </Box>
         }
         sx={{ ml: -1.5, alignItems: 'flex-start', mt: 1 }}
       />
-    </div>
+    </Box>
   );
 }

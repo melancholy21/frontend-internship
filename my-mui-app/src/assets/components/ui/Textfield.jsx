@@ -1,16 +1,18 @@
+import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 const LabelConfig = {
-  fontSize: '0.875rem',
+  fontSize: '16px',
   fontWeight: 700,
-  color: '#111827',
+  color: 'text.primary',
   mb: 0.5,
 };
 
 function LabeledInput({ label, placeholder, type = "text" }) {
   return (
-    <div className="flex flex-col w-full">
+    <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
       <Typography sx={LabelConfig}>{label}</Typography>
       <TextField 
         placeholder={placeholder} 
@@ -21,32 +23,32 @@ function LabeledInput({ label, placeholder, type = "text" }) {
         sx={{
           '& .MuiOutlinedInput-root': {
             borderRadius: '4px',
-            backgroundColor: '#fff',
+            backgroundColor: 'background.paper',
             '& fieldset': {
-              borderColor: '#d1d5db',
+              borderColor: 'grey.300',
             }
           },
           '& .MuiOutlinedInput-input': {
             py: 1.25,
-            fontSize: '0.9rem',
-            color: '#374151'
+            fontSize: '16px',
+            color: 'text.secondary'
           }
         }}
       />
-    </div>
+    </Box>
   );
 }
 
 export default function GymTextFields() {
   return (
-    <div className="flex flex-col gap-5 w-full">
-      <div className="flex flex-col sm:flex-row gap-4 w-full">
+    <Stack spacing={2.5} sx={{ width: '100%' }}>
+      <Stack direction={{ xs: 'column', sm: 'row'}} spacing={2} sx={{ width: '100%' }}>
         <LabeledInput label="First Name" placeholder="Enter your first name" />
         <LabeledInput label="Last Name" placeholder="Enter your last name" />
-      </div>
+      </Stack>
       <LabeledInput label="Email Address" placeholder="Enter your email" type="email" />
       <LabeledInput label="Phone Number" placeholder="Enter your phone number" type="tel" />
       <LabeledInput label="Date of Birth" placeholder="DD/MM/YYYY" />
-    </div>
+    </Stack>
   );
 }

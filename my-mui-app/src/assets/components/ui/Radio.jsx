@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack'
 
 const LabelConfig = {
-  fontSize: '14px',
+  fontSize: '16px',
   fontWeight: 700,
   color: 'text.primary',
   mb: 1.25,
@@ -16,7 +16,7 @@ const LabelConfig = {
 
 const controlStyle = {
   '& .MuiSvgIcon-root': {
-    fontSize: 22,
+    fontSize: '20px',
     color: 'grey.300',
   },
   '&.Mui-checked .MuiSvgIcon-root': {
@@ -26,7 +26,7 @@ const controlStyle = {
 
 const formLabelStyle = {
   '& .MuiTypography-root': {
-    fontSize: '13.6px',
+    fontSize: '16px',
     color: 'text.primary',
     fontWeight: 600
   }

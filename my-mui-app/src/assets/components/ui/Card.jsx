@@ -18,13 +18,12 @@ export default function GymRegistrationCard() {
         overflow: 'hidden',
         background: 'background.paper'
       }}
-      className="shadow-2xl bg-white w-full border border-gray-100"
     >
       <Box component="section" sx={{ pt: 5, px: {xs: 4, sm:5}, pb: 1.5 }}>
-        <Typography variant="h5" component="h2" sx={{ fontWeight: 800, color: 'text.primary', mb: 1, fontSize: '1.4rem' }}>
+        <Typography variant="h5" component="h2" sx={{ fontWeight: 800, color: 'text.primary', mb: 1, fontSize: '20px' }}>
           Gym Registration Form
         </Typography>
-        <Typography variant="body1" sx={{ color: 'text.secondary', fontSize: '0.9rem', fontWeight: 500 }}>
+        <Typography variant="body1" sx={{ color: 'text.secondary', fontSize: '16px', fontWeight: 500 }}>
           Fill out the information below to sign up for our gym facilities.
         </Typography>
       </Box>

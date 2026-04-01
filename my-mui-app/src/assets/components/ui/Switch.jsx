@@ -22,10 +22,10 @@ export default function GymUpdatesSwitch() {
         }
         label={
           <Box component='section' sx={{ ml: 0.5 }}> 
-            <Typography sx={{ fontSize: '14px', color: 'text.primary', fontWeight: 600 }}>
+            <Typography sx={{ fontSize: '16px', color: 'text.primary', fontWeight: 600 }}>
               Subscribe to Gym Updates
             </Typography>
-            <Typography sx={{ fontSize: '12.8px', color: 'grey.500', mt: 0.25 }}>
+            <Typography sx={{ fontSize: '12px', color: 'grey.500', mt: 0.25 }}>
               Receive weekly class schedules and exclusive member offers.
             </Typography>
           </Box>

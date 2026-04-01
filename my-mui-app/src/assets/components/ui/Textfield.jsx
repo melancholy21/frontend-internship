@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 const LabelConfig = {
-  fontSize: '0.875rem',
+  fontSize: '16px',
   fontWeight: 700,
   color: 'text.primary',
   mb: 0.5,
@@ -30,7 +30,7 @@ function LabeledInput({ label, placeholder, type = "text" }) {
           },
           '& .MuiOutlinedInput-input': {
             py: 1.25,
-            fontSize: '14.4px',
+            fontSize: '16px',
             color: 'text.secondary'
           }
         }}

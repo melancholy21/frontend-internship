@@ -11,11 +11,11 @@ export default function GymSubmitButton() {
         fontWeight: 'bold', 
         textTransform: 'none',
         borderRadius: '4px',
-        backgroundColor: '#007bff', 
-        color: '#fff',
+        backgroundColor: 'primary.main', 
+        color: 'common.white',
         boxShadow: 'none',
         '&:hover': {
-          backgroundColor: '#0069d9',
+          backgroundColor: 'primary.dark',
           boxShadow: 'none',
         }
       }}

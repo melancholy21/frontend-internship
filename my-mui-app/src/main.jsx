@@ -7,16 +7,27 @@ import App from './App.jsx'
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#000000',
-      light: '#a855f7',
-      dark: '#7e22ce',
+      main: '#007bff',
+      dark: '#0069d9',
     },
-    secondary: {
-      main: '#d946ef',
+    background: {
+      default: '#f9fafb', 
+      paper: '#ffffff',
     },
-  },
-  shape: {
-    borderRadius: 8,
+    text: {
+      primary: '#111827',
+      secondary: '#374151',
+      disabled: '#9ca3af',
+    },
+    grey: {
+      50: '#f9fafb',
+      300: '#d1d5db',
+      400: '#9ca3af',
+      500: '#6b7280',
+      600: '#4b5563',
+      700: '#374151',
+      900: '#111827',
+    }
   },
 });
 

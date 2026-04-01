@@ -3,11 +3,13 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack'
 
 const LabelConfig = {
   fontSize: '0.875rem',
   fontWeight: 700,
-  color: '#111827',
+  color: 'text.primary',
   mb: 1.25,
   mt: 2
 };
@@ -15,36 +17,46 @@ const LabelConfig = {
 const controlStyle = {
   '& .MuiSvgIcon-root': {
     fontSize: 22,
-    color: '#d1d5db',
+    color: 'grey.300',
   },
   '&.Mui-checked .MuiSvgIcon-root': {
-    color: '#007bff',
+    color: 'primary.main',
   }
 };
 
 const formLabelStyle = {
   '& .MuiTypography-root': {
     fontSize: '0.85rem',
-    color: '#111827',
+    color: 'text.primary',
     fontWeight: 600
   }
 };
 
 export default function WorkoutTimeRadio() {
   return (
-    <FormControl className="w-full mt-6">
+    <FormControl sx={{ width: 'full', mt: 2 }}>
       <Typography sx={LabelConfig}>Preferred Workout Time</Typography>
       <RadioGroup
         aria-labelledby="workout-time-label"
         defaultValue=""
         name="workout-time"
       >
-        <div className="grid grid-cols-2 gap-y-2 gap-x-8 w-full">
-          <FormControlLabel value="Morning" control={<Radio sx={controlStyle} />} label="Morning" sx={formLabelStyle} />
-          <FormControlLabel value="Afternoon" control={<Radio sx={controlStyle} />} label="Afternoon" sx={formLabelStyle} />
-          <FormControlLabel value="Evening" control={<Radio sx={controlStyle} />} label="Evening" sx={formLabelStyle} />
-          <FormControlLabel value="Night" control={<Radio sx={controlStyle} />} label="Night" sx={formLabelStyle} />
-        </div>
+        {/* <div className="grid grid-cols-2 gap-y-2 gap-x-8 w-full"> */}
+        <Grid container spacing={1} columnSpacing={10} sx={{ width: '100%' }}>
+          <Grid size={6}>
+            <Stack direction='column'>
+              <FormControlLabel value="Morning" control={<Radio sx={controlStyle} />} label="Morning" sx={formLabelStyle} />
+              <FormControlLabel value="Afternoon" control={<Radio sx={controlStyle} />} label="Afternoon" sx={formLabelStyle} />
+            </Stack>
+          </Grid>
+          <Grid size={6}>
+            <Stack direction='column'>
+              <FormControlLabel value="Evening" control={<Radio sx={controlStyle} />} label="Evening" sx={formLabelStyle} />
+              <FormControlLabel value="Night" control={<Radio sx={controlStyle} />} label="Night" sx={formLabelStyle} />
+            </Stack>
+          </Grid>
+        </Grid>
+        {/* </div> */}
       </RadioGroup>
     </FormControl>
   );

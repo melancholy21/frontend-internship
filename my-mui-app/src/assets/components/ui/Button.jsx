@@ -6,8 +6,8 @@ export default function GymSubmitButton() {
       variant="contained" 
       sx={{ 
         py: 1.25, 
-        px: { xs:5, sm: 6 },
-        fontSize: '1rem', 
+        px: { xs: 5, sm: 6 },
+        fontSize: '16px', 
         fontWeight: 'bold', 
         textTransform: 'none',
         borderRadius: '4px',

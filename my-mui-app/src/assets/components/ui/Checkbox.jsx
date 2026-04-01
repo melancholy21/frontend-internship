@@ -5,9 +5,8 @@ import Box from '@mui/material/Box'
 
 export default function TermsCheckbox() {
   return (
-    // <div className="flex flex-col mt-6 mb-6 w-full text-left">
     <Box component='section' sx={{ display: 'flex', flexDirection: 'column', my: 3, width: '100%', textAlign: 'left' }}>
-      <Typography variant="body2" sx={{ color: 'grey.600', lineHeight: 1.5, mb: 1, fontSize: '0.9rem' }}>
+      <Typography variant="body2" sx={{ color: 'grey.600', lineHeight: 1.5, mb: 1, fontSize: '14.4px' }}>
         Please read and accept the terms and conditions to proceed with the registration.
       </Typography>
 
@@ -32,6 +31,5 @@ export default function TermsCheckbox() {
         }}
       />
     </Box>
-    // </div>
   );
 }

@@ -20,7 +20,6 @@ export default function GymRegistrationCard() {
       }}
       className="shadow-2xl bg-white w-full border border-gray-100"
     >
-      {/* <div className="pt-10 px-8 sm:px-10 pb-2"> */}
       <Box component="section" sx={{ pt: 5, px: {xs: 4, sm:5}, pb: 1.5 }}>
         <Typography variant="h5" component="h2" sx={{ fontWeight: 800, color: 'text.primary', mb: 1, fontSize: '1.4rem' }}>
           Gym Registration Form
@@ -29,7 +28,6 @@ export default function GymRegistrationCard() {
           Fill out the information below to sign up for our gym facilities.
         </Typography>
       </Box>
-      {/* </div> */}
       
       <CardContent sx={{ px: { xs: 4, sm: 5 }, pt: 3, pb: 6, display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
         
@@ -39,11 +37,9 @@ export default function GymRegistrationCard() {
         <GymUpdatesSwitch />
         <TermsCheckbox />
         
-        {/* <div className="w-full flex justify-center mt-1.5"> */}
-        <Box component="section" sx={{ width: '100%', display: 'flex', justifyContent: 'center', mt: 1.2 }}>
+        <Box component="section" sx={{ width: '100%', display: 'flex', justifyContent: 'center', mt: 0.5 }}>
           <GymSubmitButton />
         </Box>
-        {/* </div> */}
         
       </CardContent>
     </Card>

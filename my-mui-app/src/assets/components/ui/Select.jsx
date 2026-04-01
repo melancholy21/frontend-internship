@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 const LabelConfig = {
-  fontSize: '0.875rem',
+  fontSize: '14px',
   fontWeight: 700,
   color: 'text.primary',
   mb: 0.5,
@@ -20,7 +20,6 @@ export default function GymGoalSelect() {
   };
 
   return (
-    // <div className="flex flex-col w-full mt-5">
     <Box component='section'sx={{ display: 'flex', flexDirection: 'column', width: '100%', mt: 2.5}}>
       <Typography sx={LabelConfig}>Fitness Goal</Typography>
       <FormControl fullWidth size="small">
@@ -37,7 +36,7 @@ export default function GymGoalSelect() {
             },
             '& .MuiSelect-select': {
               py: 1.25,
-              fontSize: '0.9rem',
+              fontSize: '14.4px',
               color: goal === '' ? 'text.disabled' : 'text.secondary',
             }
           }}
@@ -52,6 +51,5 @@ export default function GymGoalSelect() {
         </Select>
       </FormControl>
     </Box>
-    // </div>
   );
 }

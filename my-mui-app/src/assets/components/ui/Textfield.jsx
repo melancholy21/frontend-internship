@@ -1,6 +1,7 @@
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 const LabelConfig = {
   fontSize: '0.875rem',
@@ -11,7 +12,7 @@ const LabelConfig = {
 
 function LabeledInput({ label, placeholder, type = "text" }) {
   return (
-    <div className="flex flex-col w-full">
+    <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
       <Typography sx={LabelConfig}>{label}</Typography>
       <TextField 
         placeholder={placeholder} 
@@ -29,29 +30,25 @@ function LabeledInput({ label, placeholder, type = "text" }) {
           },
           '& .MuiOutlinedInput-input': {
             py: 1.25,
-            fontSize: '0.9rem',
+            fontSize: '14.4px',
             color: 'text.secondary'
           }
         }}
       />
-    </div>
+    </Box>
   );
 }
 
 export default function GymTextFields() {
   return (
-    // <div className="flex flex-col gap-5 w-full">
     <Stack spacing={2.5} sx={{ width: '100%' }}>
-      {/* <div className="flex flex-col sm:flex-row gap-4 w-full"> */}
       <Stack direction={{ xs: 'column', sm: 'row'}} spacing={2} sx={{ width: '100%' }}>
         <LabeledInput label="First Name" placeholder="Enter your first name" />
         <LabeledInput label="Last Name" placeholder="Enter your last name" />
       </Stack>
-      {/* </div> */}
       <LabeledInput label="Email Address" placeholder="Enter your email" type="email" />
       <LabeledInput label="Phone Number" placeholder="Enter your phone number" type="tel" />
       <LabeledInput label="Date of Birth" placeholder="DD/MM/YYYY" />
     </Stack>
-    // </div>
   );
 }

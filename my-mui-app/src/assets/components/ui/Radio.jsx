@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack'
 
 const LabelConfig = {
-  fontSize: '0.875rem',
+  fontSize: '14px',
   fontWeight: 700,
   color: 'text.primary',
   mb: 1.25,
@@ -26,7 +26,7 @@ const controlStyle = {
 
 const formLabelStyle = {
   '& .MuiTypography-root': {
-    fontSize: '0.85rem',
+    fontSize: '13.6px',
     color: 'text.primary',
     fontWeight: 600
   }
@@ -41,7 +41,6 @@ export default function WorkoutTimeRadio() {
         defaultValue=""
         name="workout-time"
       >
-        {/* <div className="grid grid-cols-2 gap-y-2 gap-x-8 w-full"> */}
         <Grid container spacing={1} columnSpacing={10} sx={{ width: '100%' }}>
           <Grid size={6}>
             <Stack direction='column'>
@@ -56,7 +55,6 @@ export default function WorkoutTimeRadio() {
             </Stack>
           </Grid>
         </Grid>
-        {/* </div> */}
       </RadioGroup>
     </FormControl>
   );

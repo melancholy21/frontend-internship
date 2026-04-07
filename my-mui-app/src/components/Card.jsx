@@ -8,8 +8,10 @@ import WorkoutTimeRadio from './Radio';
 import GymUpdatesSwitch from './Switch';
 import TermsCheckbox from './Checkbox';
 import GymSubmitButton from './Button';
+import { useNavigate } from 'react-router-dom';
 
 export default function GymRegistrationCard() {
+  const navigate = useNavigate();
   return (
     <Card 
       elevation={2} 
@@ -36,7 +38,7 @@ export default function GymRegistrationCard() {
         <GymUpdatesSwitch />
         <TermsCheckbox />
         
-        <Box component="section" sx={{ width: '100%', display: 'flex', justifyContent: 'center', mt: 0.5 }}>
+        <Box component="section" sx={{ width: '100%', display: 'flex', justifyContent: 'center', mt: 0.5 }} onClick={() => navigate('/login') }>
           <GymSubmitButton />
         </Box>
         

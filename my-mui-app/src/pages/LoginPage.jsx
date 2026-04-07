@@ -1,16 +1,18 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../context/userContext';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Alert from '@mui/material/Alert';
-import Divider from '@mui/material/Divider';
-import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
+import { 
+  Box, 
+  Card, 
+  CardContent, 
+  Typography, 
+  Button, 
+  TextField, 
+  Alert, 
+  Divider, 
+  Chip, 
+  Stack 
+} from '@mui/material';
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -30,11 +32,11 @@ export default function LoginPage() {
     const testEmail = email.toLowerCase().trim();
     let role = null;
 
-    if (testEmail === 'admin@test.com') role = 'admin';
-    else if (testEmail === 'coach@test.com') role = 'coach';
-    else if (testEmail === 'member@test.com') role = 'member';
+    if (testEmail === 'admin@test.com' && password === 'admin123') role = 'admin';
+    else if (testEmail === 'coach@test.com' && password === 'coach123') role = 'coach';
+    else if (testEmail === 'member@test.com' && password === 'member123') role = 'member';
     else {
-      setError('Invalid mock account. Try admin@test.com, coach@test.com, or member@test.com');
+      setError('Invalid email or password.');
       return;
     }
 
@@ -90,7 +92,10 @@ export default function LoginPage() {
               key={role}
               label={role} 
               size="small" 
-              onClick={() => setEmail(`${role.toLowerCase()}@test.com`)} 
+              onClick={() => {
+                setEmail(`${role.toLowerCase()}@test.com`);
+                setPassword(`${role.toLowerCase()}123`);
+              }} 
               sx={{ cursor: 'pointer' }}
             />
           ))}
@@ -117,7 +122,7 @@ export default function LoginPage() {
               fullWidth
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Any password works for now"
+              placeholder="e.g. admin123"
               required
             />
 

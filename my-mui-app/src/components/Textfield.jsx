@@ -1,7 +1,4 @@
-import Stack from '@mui/material/Stack';
-import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import { Stack, TextField, Typography, Box } from '@mui/material';
 
 const LabelConfig = {
   fontSize: '16px',

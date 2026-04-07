@@ -1,7 +1,9 @@
+import { Box, Typography } from '@mui/material';
+
 export const GuestPage = () => {
   return (
-    <div>
-      <h1>GuestPage</h1>
-    </div>
+    <Box>
+      <Typography>GuestPage</Typography>
+    </Box>
   )
 }

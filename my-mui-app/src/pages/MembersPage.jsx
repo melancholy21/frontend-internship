@@ -1,7 +1,9 @@
+import { Box, Typography } from '@mui/material';
+
 export const MembersPage = () => {
   return (
-    <div>
-      <h1>Members Page</h1>
-    </div>
+    <Box>
+      <Typography variant='h6'>Members</Typography>
+    </Box>
   )
 }

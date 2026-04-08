@@ -30,11 +30,12 @@ export default function LoginPage() {
     e.preventDefault();
     
     const testEmail = email.toLowerCase().trim();
+    const testPassword = password.toLowerCase().trim();
     let role = null;
 
-    if (testEmail === 'admin@test.com' && password === 'admin123') role = 'admin';
-    else if (testEmail === 'coach@test.com' && password === 'coach123') role = 'coach';
-    else if (testEmail === 'member@test.com' && password === 'member123') role = 'member';
+    if (testEmail === 'admin@test.com' && testPassword === 'admin123') role = 'admin';
+    else if (testEmail === 'coach@test.com' && testPassword === 'coach123') role = 'coach';
+    else if (testEmail === 'member@test.com' && testPassword === 'member123') role = 'member';
     else {
       setError('Invalid email or password.');
       return;
@@ -85,22 +86,7 @@ export default function LoginPage() {
             Sign in to access your gym account.
           </Typography>
         </Box>
-
-        <Stack direction="row" spacing={1} justifyContent="center" sx={{ mb: 3 }}>
-          {['Admin', 'Coach', 'Member'].map((role) => (
-            <Chip 
-              key={role}
-              label={role} 
-              size="small" 
-              onClick={() => {
-                setEmail(`${role.toLowerCase()}@test.com`);
-                setPassword(`${role.toLowerCase()}123`);
-              }} 
-              sx={{ cursor: 'pointer' }}
-            />
-          ))}
-        </Stack>
-        
+  
         <CardContent sx={{ p: 0, '&:last-child': { pb: 0 } }}>
           <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {error && <Alert severity="error">{error}</Alert>}
@@ -111,7 +97,7 @@ export default function LoginPage() {
               fullWidth
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="admin@test.com"
+              placeholder="Enter your email address"
               required
             />
             
@@ -122,7 +108,7 @@ export default function LoginPage() {
               fullWidth
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="e.g. admin123"
+              placeholder="Enter your password"
               required
             />
 

@@ -1,7 +1,6 @@
-import Checkbox from '@mui/material/Checkbox';
+import { Typography, Box, Checkbox } from '@mui/material';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box'
+
 
 export default function TermsCheckbox() {
   return (

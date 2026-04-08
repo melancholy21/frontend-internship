@@ -1,7 +1,4 @@
-import Switch from '@mui/material/Switch';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import { Switch, FormControlLabel, Typography, Box } from '@mui/material';
 
 export default function GymUpdatesSwitch() {
   return (

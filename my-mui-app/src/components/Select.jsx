@@ -1,9 +1,5 @@
 import * as React from 'react';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import { MenuItem, FormControl, Select, Typography, Box } from '@mui/material';
 
 const LabelConfig = {
   fontSize: '16px',

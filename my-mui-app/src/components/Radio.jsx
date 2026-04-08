@@ -1,10 +1,12 @@
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack'
+import { 
+  Radio, 
+  RadioGroup, 
+  FormControlLabel, 
+  FormControl, 
+  Typography, 
+  Grid, 
+  Stack 
+} from '@mui/material';
 
 const LabelConfig = {
   fontSize: '16px',

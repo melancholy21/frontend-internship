@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 export const ProfilePage = () => {
   return (
     <Box>
-      <Typography variant='h6'>Members</Typography>
+      <Typography variant='h6'>Member Profile</Typography>
     </Box>
   )
 }

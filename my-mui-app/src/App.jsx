@@ -6,6 +6,7 @@ import ProtectedRoutes from './context/ProtectedRoutes';
 import { MembersPage } from './pages/MembersPage';
 import { RegisterPage } from './pages/RegisterPage';
 import { ProfilePage } from './pages/ProfilePage';
+import { CoachPage } from './pages/CoachPage';
 
 function App() {
   return (
@@ -32,7 +33,13 @@ function App() {
               <MembersPage />
             </ProtectedRoutes>
           }/>
-          
+
+          <Route path='/coach' element={
+            <ProtectedRoutes roles={['coach', 'admin']}>
+              <CoachPage />
+            </ProtectedRoutes>
+          }/>
+
           <Route path='/admin/users' element={
             <ProtectedRoutes roles={['admin']}>
               <AdminUsersPage />

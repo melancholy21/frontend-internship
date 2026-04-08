@@ -9,9 +9,7 @@ import {
   Button, 
   TextField, 
   Alert, 
-  Divider, 
-  Chip, 
-  Stack 
+  Divider
 } from '@mui/material';
 
 export default function LoginPage() {
@@ -44,7 +42,7 @@ export default function LoginPage() {
     login(role);
   
     if (role === 'admin') navigate('/admin/users', { replace: true });
-    else if (role === 'coach') navigate('/members', { replace: true });
+    else if (role === 'coach') navigate('/coach', { replace: true });
     else navigate('/profile', { replace: true });
   };
 
